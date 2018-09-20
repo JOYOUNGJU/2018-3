@@ -1,5 +1,3 @@
- 
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "exBean.studentVO" %>
 <%@ page import = "exBean.studentDAO" %>
@@ -12,11 +10,9 @@
 <%
  request.setCharacterEncoding("UTF-8");
  studentVO item = new studentVO(); //사용자 객체 생성
-
  item.setNo(request.getParameter("no"));
  item.setName(request.getParameter("name"));
  studentDAO dao = new studentDAO(); //사용자 객체 생성
  dao.insertStudent(item);
+ response.sendRedirect("read.jsp");
 %>
-
- 
